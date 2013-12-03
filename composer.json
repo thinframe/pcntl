@@ -15,7 +15,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "thinframe/foundation": "dev-master"
+        "thinframe/foundation": "dev-master",
+        "thinframe/events": "dev-master"
     },
     "autoload": {
         "psr-0": {
