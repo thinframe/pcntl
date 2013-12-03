@@ -41,7 +41,7 @@ class PcntlApplication extends AbstractApplication
     public function getConfigurationFiles()
     {
         return [
-
+            'resources/services.yml'
         ];
     }
 
