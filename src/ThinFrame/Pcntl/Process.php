@@ -30,37 +30,17 @@ class Process
      */
     public function restart()
     {
+        $startCommand = $this->getStartCommand();
+        $cwd          = $this->getWorkingDir();
         $this->sendSignal(new Signal(Signal::KILL));
         list($exitStatus, $out, $err, $pid) = array_values(
             Exec::viaPipe(
-                $this->getStartCommand() . ' > /dev/null 2>&1 &',
-                $this->getWorkingDir()
+                $startCommand . ' > /dev/null 2>&1 &',
+                $cwd
             )
         );
 
-        return !!$exitStatus;
-    }
-
-    /**
-     * Send signal to process
-     *
-     * @param Signal $signal
-     *
-     * @return bool
-     */
-    public function sendSignal(Signal $signal)
-    {
-        return !!posix_kill($this->getPid(), $signal->__toString());
-    }
-
-    /**
-     * Get process pid
-     *
-     * @return int
-     */
-    public function getPid()
-    {
-        return $this->pid;
+        return !$exitStatus;
     }
 
     /**
@@ -74,6 +54,16 @@ class Process
     }
 
     /**
+     * Get process pid
+     *
+     * @return int
+     */
+    public function getPid()
+    {
+        return $this->pid;
+    }
+
+    /**
      * Get process cwd
      *
      * @return string
@@ -81,6 +71,18 @@ class Process
     public function getWorkingDir()
     {
         return realpath('/proc/' . $this->pid . '/cwd');
+    }
+
+    /**
+     * Send signal to process
+     *
+     * @param Signal $signal
+     *
+     * @return bool
+     */
+    public function sendSignal(Signal $signal)
+    {
+        return !!posix_kill($this->getPid(), $signal->__toString());
     }
 
     public function getTTY()
