@@ -19,8 +19,8 @@
         "thinframe/events": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "": "src/"
+        "psr-4": {
+            "ThinFrame\\Pcntl\\": "src/"
         }
     },
     "extra": {

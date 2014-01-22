@@ -3,20 +3,69 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6d3068ad4f1e5b630970783184318ae7",
+    "hash": "7d89b3ded5385750a17c8c39c2ded41a",
     "packages": [
         {
-            "name": "phpcollection/phpcollection",
-            "version": "dev-master",
+            "name": "danielstjules/stringy",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/schmittjoh/php-collection.git",
-                "reference": "5c8ec0d1091c95b973b59a3bf0eb19c5de72d8d1"
+                "url": "https://github.com/danielstjules/Stringy.git",
+                "reference": "6ba29637b2b2bc8cfd735539c6f9716ae8957477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-collection/zipball/5c8ec0d1091c95b973b59a3bf0eb19c5de72d8d1",
-                "reference": "5c8ec0d1091c95b973b59a3bf0eb19c5de72d8d1",
+                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/6ba29637b2b2bc8cfd735539c6f9716ae8957477",
+                "reference": "6ba29637b2b2bc8cfd735539c6f9716ae8957477",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Stringy": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel St. Jules",
+                    "email": "danielst.jules@gmail.com",
+                    "homepage": "http://www.danielstjules.com"
+                }
+            ],
+            "description": "A string manipulation library with multibyte support",
+            "homepage": "https://github.com/danielstjules/Stringy",
+            "keywords": [
+                "UTF",
+                "helpers",
+                "manipulation",
+                "methods",
+                "multibyte",
+                "string",
+                "utf-8",
+                "utility",
+                "utils"
+            ],
+            "time": "2013-12-05 04:36:17"
+        },
+        {
+            "name": "phpcollection/phpcollection",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-collection.git",
+                "reference": "dbec93115a5ff149b476ee2d4ede3880239a3d77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-collection/zipball/dbec93115a5ff149b476ee2d4ede3880239a3d77",
+                "reference": "dbec93115a5ff149b476ee2d4ede3880239a3d77",
                 "shasum": ""
             },
             "require": {
@@ -53,20 +102,20 @@
                 "sequence",
                 "set"
             ],
-            "time": "2013-08-22 09:46:14"
+            "time": "2013-12-13 09:27:51"
         },
         {
             "name": "phpoption/phpoption",
-            "version": "dev-master",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "1c7e8016289d17d83ced49c56d0f266fd0568941"
+                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/1c7e8016289d17d83ced49c56d0f266fd0568941",
-                "reference": "1c7e8016289d17d83ced49c56d0f266fd0568941",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
+                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
                 "shasum": ""
             },
             "require": {
@@ -102,26 +151,36 @@
                 "php",
                 "type"
             ],
-            "time": "2013-05-19 11:09:35"
+            "time": "2014-01-09 22:37:17"
         },
         {
-            "name": "psr/log",
+            "name": "symfony/config",
             "version": "dev-master",
+            "target-dir": "Symfony/Component/Config",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "url": "https://github.com/symfony/Config.git",
+                "reference": "bde2f7192a52dfd07cf5484ad65d719da28effba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/symfony/Config/zipball/bde2f7192a52dfd07cf5484ad65d719da28effba",
+                "reference": "bde2f7192a52dfd07cf5484ad65d719da28effba",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/filesystem": "~2.3"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
-                    "Psr\\Log\\": ""
+                    "Symfony\\Component\\Config\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -130,17 +189,269 @@
             ],
             "authors": [
                 {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
                 }
             ],
-            "description": "Common interface for logging libraries",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
+            "description": "Symfony Config Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-01-07 13:29:57"
+        },
+        {
+            "name": "symfony/dependency-injection",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/DependencyInjection",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/DependencyInjection.git",
+                "reference": "26648a063db967e0a0510df14d22555f4afd898e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/26648a063db967e0a0510df14d22555f4afd898e",
+                "reference": "26648a063db967e0a0510df14d22555f4afd898e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.4",
+                "symfony/yaml": "~2.0"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\DependencyInjection\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
             ],
-            "time": "2012-12-21 11:40:51"
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DependencyInjection Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-01-07 13:29:57"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "e81f1b30eb9748c3f8e0de3a92ea210845cff0a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/e81f1b30eb9748c3f8e0de3a92ea210845cff0a9",
+                "reference": "e81f1b30eb9748c3f8e0de3a92ea210845cff0a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-01-07 13:29:57"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "9921872611710df49cf035c259e5a461ea2d0f8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9921872611710df49cf035c259e5a461ea2d0f8c",
+                "reference": "9921872611710df49cf035c259e5a461ea2d0f8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-01-07 13:29:57"
+        },
+        {
+            "name": "thinframe/applications",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinframe/applications.git",
+                "reference": "353ab1790d2bbc3ec7df3e23ae5966f73b65fe54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thinframe/applications/zipball/353ab1790d2bbc3ec7df3e23ae5966f73b65fe54",
+                "reference": "353ab1790d2bbc3ec7df3e23ae5966f73b65fe54",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/config": "@stable",
+                "symfony/dependency-injection": "@stable",
+                "symfony/yaml": "@stable",
+                "thinframe/foundation": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ThinFrame\\Applications\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sorin Badea",
+                    "email": "sorin.badea91@gmail.com",
+                    "homepage": "http://sorinbadea.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP applications ecosystem",
+            "homepage": "http://thinframe.net",
+            "keywords": [
+                "Applications",
+                "ecosystem",
+                "thinframe"
+            ],
+            "time": "2014-01-22 19:30:50"
+        },
+        {
+            "name": "thinframe/events",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinframe/events.git",
+                "reference": "fbba4c2bad9654056a7e9fd2767eaea3e4cbe99b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thinframe/events/zipball/fbba4c2bad9654056a7e9fd2767eaea3e4cbe99b",
+                "reference": "fbba4c2bad9654056a7e9fd2767eaea3e4cbe99b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "thinframe/applications": "dev-master",
+                "thinframe/foundation": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ThinFrame\\Events\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sorin Badea",
+                    "email": "sorin.badea91@gmail.com",
+                    "homepage": "http://sorinbadea.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Powerful events system.",
+            "homepage": "http://thinframe.net",
+            "keywords": [
+                "events",
+                "thinframe"
+            ],
+            "time": "2014-01-22 19:35:35"
         },
         {
             "name": "thinframe/foundation",
@@ -148,23 +459,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinframe/foundation.git",
-                "reference": "de444906dea18fe1038cd0ae435c020240e1bbd7"
+                "reference": "9185ddd7c9ac915ca98005beb4916f3cc010dce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thinframe/foundation/zipball/de444906dea18fe1038cd0ae435c020240e1bbd7",
-                "reference": "de444906dea18fe1038cd0ae435c020240e1bbd7",
+                "url": "https://api.github.com/repos/thinframe/foundation/zipball/9185ddd7c9ac915ca98005beb4916f3cc010dce8",
+                "reference": "9185ddd7c9ac915ca98005beb4916f3cc010dce8",
                 "shasum": ""
             },
             "require": {
+                "danielstjules/stringy": "1.2.*",
                 "php": ">=5.4.0",
-                "phpcollection/phpcollection": "dev-master",
-                "psr/log": "dev-master"
+                "phpcollection/phpcollection": "0.3.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "": "src/"
+                "psr-4": {
+                    "ThinFrame\\Foundation\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -185,7 +504,7 @@
                 "foundation",
                 "thinframe"
             ],
-            "time": "2013-11-11 18:42:38"
+            "time": "2014-01-22 18:16:30"
         }
     ],
     "packages-dev": [
@@ -196,7 +515,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "thinframe/foundation": 20
+        "thinframe/foundation": 20,
+        "thinframe/events": 20
     },
     "platform": {
         "php": ">=5.4.0"

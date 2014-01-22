@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * /src/Process.php
+ *
+ * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @license   MIT license (see the license file in the root directory)
+ */
+
 namespace ThinFrame\Pcntl;
 
 use ThinFrame\Foundation\Constants\DataType;
@@ -7,6 +14,12 @@ use ThinFrame\Foundation\Helpers\TypeCheck;
 use ThinFrame\Pcntl\Constants\Signal;
 use ThinFrame\Pcntl\Helpers\Exec;
 
+/**
+ * Class Process
+ *
+ * @package ThinFrame\Pcntl
+ * @since   0.2
+ */
 class Process
 {
     /**
@@ -103,6 +116,7 @@ class Process
 
         $environ = str_replace("\000", "&", file_get_contents('/proc/' . $this->getPid() . '/environ'));
         parse_str($environ, $variables);
+
         return $variables;
     }
 
