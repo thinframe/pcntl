@@ -12,11 +12,11 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "thinframe/foundation": "dev-master",
-        "thinframe/events": "dev-master"
+        "thinframe/foundation": "@stable",
+        "thinframe/events": "@stable"
     },
     "autoload": {
         "psr-4": {
