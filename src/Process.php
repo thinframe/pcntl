@@ -3,7 +3,7 @@
 /**
  * /src/Process.php
  *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
@@ -98,9 +98,14 @@ class Process
         return !!posix_kill($this->getPid(), $signal->__toString());
     }
 
+    /**
+     * Get process tty
+     *
+     * @return string
+     */
     public function getTTY()
     {
-        var_dump($this->getEnvironmentVariables()['SSH_TTY']);
+        return $this->getEnvironmentVariables()['SSH_TTY'];
     }
 
     /**
