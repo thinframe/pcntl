@@ -1,21 +1,19 @@
 <?php
 
 /**
- * /src/Process.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
 namespace ThinFrame\Pcntl;
 
-use ThinFrame\Foundation\Constants\DataType;
-use ThinFrame\Foundation\Helpers\TypeCheck;
-use ThinFrame\Pcntl\Constants\Signal;
-use ThinFrame\Pcntl\Helpers\Exec;
+use ThinFrame\Foundation\Constant\DataType;
+use ThinFrame\Foundation\Helper\TypeCheck;
+use ThinFrame\Pcntl\Constant\Signal;
+use ThinFrame\Pcntl\Helper\Exec;
 
 /**
- * Class Process
+ * Process
  *
  * @package ThinFrame\Pcntl
  * @since   0.2
@@ -43,13 +41,13 @@ class Process
      */
     public function restart()
     {
-        $startCommand = $this->getStartCommand();
-        $cwd          = $this->getWorkingDir();
+        $startCommand      = $this->getStartCommand();
+        $currentWorkingDir = $this->getWorkingDir();
         $this->sendSignal(new Signal(Signal::KILL));
-        list($exitStatus, $out, $err, $pid) = array_values(
+        list($exitStatus, $stdOut, $stdErr, $processId) = array_values(
             Exec::viaPipe(
                 $startCommand . ' > /dev/null 2>&1 &',
-                $cwd
+                $currentWorkingDir
             )
         );
 

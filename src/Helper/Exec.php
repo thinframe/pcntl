@@ -1,19 +1,17 @@
 <?php
 
 /**
- * /src/Helpers/Exec.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Pcntl\Helpers;
+namespace ThinFrame\Pcntl\Helper;
 
-use ThinFrame\Foundation\Constants\DataType;
-use ThinFrame\Foundation\Helpers\TypeCheck;
+use ThinFrame\Foundation\Constant\DataType;
+use ThinFrame\Foundation\Helper\TypeCheck;
 
 /**
- * Class Exec
+ * Exec
  *
  * @package ThinFrame\Pcntl\Helpers
  * @since   0.2

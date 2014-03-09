@@ -1,8 +1,6 @@
 <?php
 
 /**
- * /src/SignalsCatcher.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -11,11 +9,11 @@ namespace ThinFrame\Pcntl;
 
 use ThinFrame\Events\Dispatcher;
 use ThinFrame\Events\DispatcherAwareInterface;
-use ThinFrame\Foundation\Exceptions\RuntimeException;
-use ThinFrame\Pcntl\Constants\Signal;
+use ThinFrame\Foundation\Exception\RuntimeException;
+use ThinFrame\Pcntl\Constant\Signal;
 
 /**
- * Class SignalsCatcher
+ * SignalsCatcher
  *
  * @package ThinFrame\Pcntl
  * @since   0.2
@@ -56,7 +54,7 @@ class SignalsCatcher implements DispatcherAwareInterface
     /**
      * Bind all added signals
      *
-     * @throws \ThinFrame\Foundation\Exceptions\RuntimeException
+     * @throws \ThinFrame\Foundation\Exception\RuntimeException
      */
     public function bind()
     {

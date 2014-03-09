@@ -14,5 +14,8 @@
 * Via composer: `composer require thinframe/pcntl`
 * Via GIT: `git clone https://github.com/thinframe/pnctl`
 
-##Copyright
-* MIT License - Sorin Badea <sorin.badea91@gmail.com>
+##Contribuitors
+* Sorin Badea <sorin.badea91@gmail.com>
+
+##License
+* MIT License
