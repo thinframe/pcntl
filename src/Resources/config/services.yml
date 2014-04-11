@@ -1,3 +1,5 @@
+parameters:
+    pcntl.signal_catcher.class: 'ThinFrame\Pcntl\SignalsCatcher'
 services:
     pcntl.signal_catcher:
-        class: 'ThinFrame\Pcntl\SignalsCatcher'
+        class: '%pcntl.signal_catcher.class%'
