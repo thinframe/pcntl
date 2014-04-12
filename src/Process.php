@@ -44,14 +44,9 @@ class Process
         $startCommand      = $this->getStartCommand();
         $currentWorkingDir = $this->getWorkingDir();
         $this->sendSignal(new Signal(Signal::KILL));
-        list($exitStatus, $stdOut, $stdErr, $processId) = array_values(
-            Exec::viaPipe(
-                $startCommand . ' > /dev/null 2>&1 &',
-                $currentWorkingDir
-            )
-        );
+        $result = Exec::viaPipe($startCommand . ' > /dev/null 2>&1 &', $currentWorkingDir);
 
-        return !$exitStatus;
+        return $result->isSuccessful();
     }
 
     /**

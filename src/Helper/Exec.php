@@ -9,6 +9,7 @@ namespace ThinFrame\Pcntl\Helper;
 
 use ThinFrame\Foundation\Constant\DataType;
 use ThinFrame\Foundation\Helper\TypeCheck;
+use ThinFrame\Pcntl\CommandResult;
 
 /**
  * Exec
@@ -24,7 +25,7 @@ final class Exec
      * @param      $command
      * @param null $workingDir
      *
-     * @return array
+     * @return CommandResult
      */
     public static function viaPipe($command, $workingDir = null)
     {
@@ -49,12 +50,6 @@ final class Exec
         }
         $exitStatus = trim(proc_close($resource));
 
-
-        return [
-            "exitStatus" => $exitStatus,
-            "stdOut"     => $stdOut,
-            "stdErr"     => $stdErr,
-            "pid"        => $status['pid']
-        ];
+        return new CommandResult($status['pid'], trim($stdOut), trim($stdErr), $exitStatus);
     }
 }
