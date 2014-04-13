@@ -1,18 +1,16 @@
 <?php
 
 /**
- * /src/Constants/Signal.php
- *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Pcntl\Constants;
+namespace ThinFrame\Pcntl\Constant;
 
-use ThinFrame\Foundation\DataTypes\AbstractEnum;
+use ThinFrame\Foundation\DataType\AbstractEnum;
 
 /**
- * Class Signals
+ * Signals
  *
  * @package ThinFrame\Pcntl\Constants
  * @since   0.2

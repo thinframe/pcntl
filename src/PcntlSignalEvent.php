@@ -1,19 +1,17 @@
 <?php
 
 /**
- * /src/PcntlSignalEvent.php
- *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
 namespace ThinFrame\Pcntl;
 
 use ThinFrame\Events\AbstractEvent;
-use ThinFrame\Pcntl\Constants\Signal;
+use ThinFrame\Pcntl\Constant\Signal;
 
 /**
- * Class PcntlSignalEvent
+ * PcntlSignalEvent
  *
  * @package ThinFrame\Pcntl
  * @since   0.2

@@ -1,0 +1,5 @@
+parameters:
+    pcntl.signal_catcher.class: 'ThinFrame\Pcntl\SignalsCatcher'
+services:
+    pcntl.signal_catcher:
+        class: '%pcntl.signal_catcher.class%'

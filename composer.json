@@ -12,11 +12,11 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "thinframe/foundation": "@stable",
-        "thinframe/events": "@stable"
+        "thinframe/foundation": "dev-develop",
+        "thinframe/events": "dev-develop"
     },
     "autoload": {
         "psr-4": {
@@ -25,7 +25,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.2-dev"
+            "dev-master": "0.2-dev",
+            "dev-develop": "0.3-dev"
         }
     }
 }

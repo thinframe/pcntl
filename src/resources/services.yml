@@ -1,3 +1,0 @@
-services:
-    thinframe.pcntl.signal_catcher:
-        class: 'ThinFrame\Pcntl\SignalsCatcher'
